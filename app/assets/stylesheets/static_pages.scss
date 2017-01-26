@@ -21,6 +21,17 @@ nav {
   background-color: #424242;
 }
 
+thead tr th {
+  letter-spacing: 0.2em;
+}
+
+#description {
+  padding-left: 10%;
+}
+#image {
+  padding-left: 20%;
+}
+
 /*** Footer ***/
 .footer-social {
   float: right;
