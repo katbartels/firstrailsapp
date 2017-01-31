@@ -26,25 +26,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="projectName navbar-brand" href="#">BERLIN RETRO</a>
+      <a class="projectName navbar-brand">BERLIN RETRO</a>
     </div><!-- end navbar header -->
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class>
-          <a href="#home">home</a>
+        <li>
+          <%= link_to "home", "/static_pages/landing_page" %>
         </li>
-        <li class>
-          <a href="#about">about</a>
+        <li>
+          <%= link_to "products", products_path %>
         </li>
-        <li class>
-         <a href="#shop">shop</a>
-       </li>
-       <li class>
-        <a href="#contact">contact</a>
-      </li>     
-    </ul>
-  </div><!-- end navbar collapse -->
-</div><!-- end nav container -->
+        <li>
+        <%= link_to "about", "/static_pages/about" %>
+        </li>
+        <li>
+          <%= link_to "contact", "/static_pages/contact" %>
+        </li>     
+      </ul>
+    </div><!-- end navbar collapse -->
+  </div><!-- end nav container -->
 </nav><!-- end navbar -->
 
 <%= yield %>
