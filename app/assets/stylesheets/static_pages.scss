@@ -18,7 +18,7 @@ nav ul li {
   text-transform: uppercase;
   color: white;
   letter-spacing: 0.2em;
-  font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   }
 
 nav {
@@ -36,19 +36,17 @@ thead tr th {
   padding-left: 20%;
 }
 
-
-// contact
-.contact{
-  height: 100vh;
+/*** Search ***/
+.search {
+  color: black;
 }
 
-.contact ul{
+/*** Contact ***/
+
+  .contact ul{
   list-style-type: none;
 }
 
-.contact-content{
-  left: 30%;
-}
 
 /*** Footer ***/
 .footer-social {
