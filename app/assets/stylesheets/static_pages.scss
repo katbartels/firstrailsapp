@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container-fluid {
+  padding: 0px;
+}
+
 h1 {
   color: pink;
   font-family: Helvetica;
@@ -30,6 +34,20 @@ thead tr th {
 }
 #image {
   padding-left: 20%;
+}
+
+
+// contact
+.contact{
+  height: 100vh;
+}
+
+.contact ul{
+  list-style-type: none;
+}
+
+.contact-content{
+  left: 30%;
 }
 
 /*** Footer ***/
