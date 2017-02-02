@@ -23,6 +23,13 @@ nav ul li {
 
 nav {
   background-color: #424242;
+  padding: 0 3% 0 2%;
+}
+
+.pull-right {
+  position: absolute;
+  right: 0.2em;
+  top: 1.5em;
 }
 
 thead tr th {
