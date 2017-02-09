@@ -16,19 +16,20 @@
 </p>
 
 <p>
-<strong>Colour:</strong>
+  <strong>Colour:</strong>
   <%= @product.colour %>
 </p>
 
 <p>
-<strong>Price:</strong>
+  <strong>Price:</strong>
   <%= @product.price %>
 </p>
 
-<%= @product.highest_rating_comment.body %>
-<%= render @comments %>
-<%= render 'new_comment' %>
+<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
+<%= @product.highest_rating_comment.try(:body) %>
+<%= render 'comments' %>
+<%= render 'new_comment' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> 
 <%= link_to 'Back', products_path %>
