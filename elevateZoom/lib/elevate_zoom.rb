@@ -1,0 +1,3 @@
+module ElevateZoom
+  # Your code goes here...
+end

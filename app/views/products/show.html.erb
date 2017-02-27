@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container-fluid">
+
+<div class="thumbnail">
+<%= image_tag(@product.image_url, width: "50%", class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url(:large))") %>
+</div>
+
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -35,15 +41,12 @@
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
 
+
 <%= render 'new_comment' %>
-
-
 
 <%= will_paginate @comments %>
 
-
-
 <%= link_to 'Edit', edit_product_path(@product) %> 
 <%= link_to 'Back', products_path %>
-
+<div>
 
