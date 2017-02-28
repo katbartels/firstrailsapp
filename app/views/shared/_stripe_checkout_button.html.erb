@@ -1,4 +1,5 @@
-<script>
+<script
+
 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 
 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -9,6 +10,6 @@ data-name="<%= @product.name %>"
 
 data-description="<%= @product.description %>"
 
-data-amount="<%= @product.price.to_i * 100 %>"
+data-amount="<%= @product.price.to_i * 100 %>">
 
 </script>

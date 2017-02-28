@@ -1,52 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+<div class="row">
 
-<div class="thumbnail">
-<%= image_tag(@product.image_url, width: "50%", class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url(:large))") %>
+  <%= image_tag(@product.image_url, width: "50%", class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Image url:</strong>
+    <%= @product.image_url %>
+  </p>
+
+  <p>
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
+  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
+  <%= @product.highest_rating_comment.try(:body) %>
+
+  <%= render 'comments' %>
+
+  <%= form_tag "/payments/create" do %>
+  <%= render partial: "/shared/stripe_checkout_button.html.erb" %>
+  <% end %>
+
+
+  <%= render 'new_comment' %>
+
+  <%= will_paginate @comments %>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> 
+  <%= link_to 'Back', products_path %>
 </div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-
-<%= @product.highest_rating_comment.try(:body) %>
-
-<%= render 'comments' %>
-
-<%= form_tag "/payments/create" do %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
-
-
-<%= render 'new_comment' %>
-
-<%= will_paginate @comments %>
-
-<%= link_to 'Edit', edit_product_path(@product) %> 
-<%= link_to 'Back', products_path %>
-<div>
 

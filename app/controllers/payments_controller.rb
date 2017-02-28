@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
   
   begin
     charge = Stripe::Charge.create(
-      :amount => @product.price, # amount in cents, again
+      :amount => @product.price * 100, # amount in cents, again
       :currency => "usd",
       :source => token,
       :description => params[:stripeEmail]
@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
       Order.create(
         :product_id => @product_id,
         :user_id => @user_id,
-        :total => @total
+        :total => @total.price
         )
     end
 
